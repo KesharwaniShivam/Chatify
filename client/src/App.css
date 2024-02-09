@@ -45,12 +45,12 @@ margin-left: 150px;}
 
 @font-face {
   font-family: lobsterss;
-  src: url(../public/Lobster-Regular.ttf);
+  src: url(../Lobster-Regular.ttf);
 }
 
 @font-face {
   font-family: permanentM;
-  src: url(../public/PermanentMarker-Regular.ttf);
+  src: url(../PermanentMarker-Regular.ttf);
 }
 
 .lobster{

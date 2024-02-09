@@ -1,6 +1,7 @@
 import express from "express";
 import {Server} from "socket.io";
 import {createServer, get} from "http";
+import 'dotenv/config'
 
 const app = express();
 const server = createServer(app);
@@ -13,7 +14,7 @@ const io = new Server(server, {
     },
 });
 
-const port = process.env.PORT || 3000;
+const port = 4000;
 
 app.get('/' , (req, res) =>{
     res.send("hello")
@@ -43,6 +44,6 @@ io.on("connection", (socket)=>{                                      //"connecti
 //     res.send("About page")
 // }) 
 
-server.listen(port , ()=>{
+server.listen(process.env.PORT , ()=>{
     console.log(`server is listening at port: ${port}`)
 })

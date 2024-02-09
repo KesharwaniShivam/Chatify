@@ -79,20 +79,3 @@ body{
 }
 
 
-@font-face {
-  font-family: permanent;
-  src: url(../public/PermanentMarker-Regular.ttf);
-}
-
-.permanent{
-  font-family: permanent;
-}
-
-@font-face {
-  font-family: lobster;
-  src: url(../public/Lobster-Regular.ttf);
-}
-
-.lobster{
-  font-family: lobster;
-}
