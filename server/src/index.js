@@ -8,7 +8,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
     cors:{
-        origin:"https://chatify-xi.vercel.app/",
+        origin:"*",
         methods:["GET", "POST"],
         credentials : true,
     },
