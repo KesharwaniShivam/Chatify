@@ -16,6 +16,8 @@ function App() {
   const[socketId, setSocketId] = useState("");
   const[messages, setMessages] = useState([]);
 
+  const[alertboxStatus, setAlertboxStatus] = useState(true);
+
   // const handleInput = (e)=>{
   //   setMessage(e.target.value);
   // }
@@ -53,8 +55,17 @@ function App() {
   }, []);
   return (
     <>
+
+    <div>
+    
+      <div  className={` ${alertboxStatus ? 'overLay' : '' }`}></div>
+      <div className={`${alertboxStatus ? 'alertBox' : ''}`}> 
+      <h3 className={`${alertboxStatus ? 'textCenter' : 'textHide'} text-md font-light tracking-tighter `}>YOU WILL NEED A ROOM ID TO CHAT</h3>
+      <Button size='lg' onClick ={()=> setAlertboxStatus(false) } className={`${alertboxStatus ? 'btnCenter' : "hidden"}`}>OKAY</Button>
+      </div>
+    </div>  
       
-       <div className='text-orange-500 font-bold font-lobster text-5xl fixed p-7 hover:scale-110 hover:transition-all '>
+       <div className={`text-orange-500 font-[lobster] font-semibold text-5xl fixed p-7 hover:scale-110 hover:transition-all ${alertboxStatus ? 'animate-bounce' : "animate-none"}`}>
         CHATify
        </div>
        
@@ -68,7 +79,7 @@ function App() {
           <div className="grid w-full items-center gap-4 mt-5">
             <div className="flex flex-col space-y-1.5 text-slate-300 ">
              
-              <h1 className='text-xl text-orange-400 '>{socketId}</h1>
+              <h1 className='text-xl text-orange-400 font-serif '>{socketId}</h1>
               <Label htmlFor="roomId" >Room ID</Label>
               <Input 
               value={room}
@@ -93,9 +104,9 @@ function App() {
     </Card>
     <div className='h-64 w-[400px] bg-zinc-900 rounded-xl ml-4 hover:bg-zinc-800 focus:ring-slate-800'>
       <h1 className='text-orange-500 font-semibold pt-4 text-xl items-center text-center font-mono'>Replies</h1>
-      <div className='p-4'>
+      <div className='py-4 px-8'>
       {messages.map((msg, i)=>(
-        <div key={i} className=' text-slate-200'>{msg}</div>   
+        <div key={i} className={`text-slate-200 `}>{msg}</div>   
       ))}
       </div>
     </div>

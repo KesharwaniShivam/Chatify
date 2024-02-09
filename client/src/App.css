@@ -6,5 +6,57 @@
  
 }
 
+.overLay{
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  display: block;
 
+}
 
+.alertBox{
+  position: fixed;
+  width: 400px;
+  height: 150px;
+  background-color: rgb(221, 228, 241);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+    
+}
+.btnCenter{
+margin-left: 150px;}
+
+.btnHidden{
+  display: none;
+}
+.textHide{
+  display: none;
+}
+
+.textCenter{
+  padding: 24px;
+  text-align: center;
+  font-size: larger;
+
+}
+
+@font-face {
+  font-family: lobsterss;
+  src: url(../public/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: permanentM;
+  src: url(../public/PermanentMarker-Regular.ttf);
+}
+
+.lobster{
+  font-family: lobsterss;
+}
+
+.permanent{
+  font-family: permanentM;
+}
