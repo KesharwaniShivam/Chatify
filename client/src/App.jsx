@@ -65,7 +65,7 @@ function App() {
       </div>
     </div>  
       
-       <div className={`text-orange-500 font-[lobster] font-semibold text-5xl fixed p-7 hover:scale-110 hover:transition-all ${alertboxStatus ? 'animate-bounce' : "animate-none"}`}>
+       <div className={`text-orange-500 lobster font-semibold text-5xl fixed p-7 hover:scale-110 hover:transition-all ${alertboxStatus ? 'animate-bounce' : "animate-none"}`}>
         CHATify
        </div>
        
