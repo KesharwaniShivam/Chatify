@@ -138,7 +138,7 @@ function App() {
         {showmsg}
         </div>
 
-      <div className='py-2 px-7'>
+      <div className='py-2 px-7 ml-14'>
         
       {messages.map((msg, i)=>(
         <div key={i} className={`text-slate-200 `}>{msg}</div>   
