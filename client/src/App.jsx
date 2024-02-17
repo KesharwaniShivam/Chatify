@@ -40,6 +40,9 @@ function App() {
     socket.emit("username", namee);
     
   }
+  const hadleClick = ()=>{
+    setMessages([]);
+  }
 
    
   useEffect(() => {
@@ -141,9 +144,11 @@ function App() {
       <div className='py-2 px-7 ml-14'>
         
       {messages.map((msg, i)=>(
-        <div key={i} className={`text-slate-200 `}>{msg}</div>   
+        <p key={i} className={`text-slate-200  `}>{msg}</p>   
       ))}
       </div>
+
+      <Button onClick={hadleClick} className="ml-72 mt-4 inline " size="sm" variant="destructive">Clear Chat</Button>
     </div>
     </div>
     </>
