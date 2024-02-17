@@ -93,7 +93,7 @@ function App() {
         CHATify
        </div>
       
-       <h1 className='text-white top-56 left-[24vw] relative'>{welmsg}</h1>
+       <h1 className='text-white top-56 ml-96 relative'>{welmsg}</h1>
       
     
     <div className='flex  justify-center items-center h-screen  '>
@@ -138,7 +138,7 @@ function App() {
         {showmsg}
         </div>
 
-      <div className='py-2 px-28'>
+      <div className='py-2 px-7'>
         
       {messages.map((msg, i)=>(
         <div key={i} className={`text-slate-200 `}>{msg}</div>   
