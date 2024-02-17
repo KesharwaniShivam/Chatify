@@ -29,9 +29,14 @@ io.on("connection", (socket)=>{                                      //"connecti
         io.to(room).emit("receive-msg", message)
     });
 
+    socket.on("username", (namee)=>{
+        console.log(namee);
+        socket.emit("welcome", `Welcome to the CHATify ${namee}`)
+    socket.broadcast.emit("welcome" , `${socket.id}--${namee} joined the chat`)
+    })
+
     // ye chiz apan yaha nhi krte
-    // socket.emit("welcome", "Welcome to the server")
-    // socket.broadcast.emit("welcome" , `${socket.id} joined the server`)    // here "welcome" is the event name, we defined
+        // here "welcome" is the event name, we defined
     //broadcast means usko chod ke sbko milega   
     
     socket.on("disconnect" ,()=>{
@@ -45,5 +50,5 @@ io.on("connection", (socket)=>{                                      //"connecti
 // }) 
 
 server.listen(process.env.PORT , ()=>{
-    console.log(`server is listening at port: ${port}`)
+    console.log(`server is listening at port: ${process.env.PORT}`)
 })

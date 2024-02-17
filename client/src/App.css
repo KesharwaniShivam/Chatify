@@ -18,7 +18,7 @@
 .alertBox{
   position: fixed;
   width: 400px;
-  height: 150px;
+  height: 160px;
   background-color: rgb(221, 228, 241);
   left: 50%;
   top: 50%;
@@ -27,7 +27,8 @@
     
 }
 .btnCenter{
-margin-left: 150px;}
+  margin-top: 12px;
+margin-left: 165px;}
 
 .btnHidden{
   display: none;
@@ -37,7 +38,7 @@ margin-left: 150px;}
 }
 
 .textCenter{
-  padding: 24px;
+  padding: 20px;
   text-align: center;
   font-size: larger;
 
@@ -59,4 +60,18 @@ margin-left: 150px;}
 
 .permanent{
   font-family: permanentM;
+}
+
+.nameForm{
+  
+  padding: 5px;
+  
+  text-align: center;
+  color: black;
+  border: 1px;
+  border-color: black;
+  margin-left:103px;
+  height: 30px;
+  
+
 }
