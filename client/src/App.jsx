@@ -93,7 +93,7 @@ function App() {
         CHATify
        </div>
       
-       <h1 className='text-white top-56 ml-96 relative'>{welmsg}</h1>
+       <h1 className='text-white top-52 ml-96 relative'>{welmsg}</h1>
       
     
     <div className='flex  justify-center items-center h-screen  '>
