@@ -10,7 +10,7 @@ import { Card, CardContent, CardFooter } from './components/ui/card';
 
 function App() {
   const socket = useMemo(()=>(io("https://chatify-wr17.onrender.com")), []);   //useMemo because component rerender ho rha tha to page reload ho ja rha tha ,useMEmo component rerender pe page reload nhi krta
-  const socket2 = useMemo(()=>(io("http://localhost:3000/")), []);   //useMemo because component rerender ho rha tha to page reload ho ja rha tha ,useMEmo component rerender pe page reload nhi krta
+  // const socket2 = useMemo(()=>(io("http://localhost:3000/")), []);   //useMemo because component rerender ho rha tha to page reload ho ja rha tha ,useMEmo component rerender pe page reload nhi krta
 
   const[message, setMessage] = useState("")
   const[room, setRoom] = useState("");
