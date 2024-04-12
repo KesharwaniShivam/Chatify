@@ -5,6 +5,7 @@ import { Button } from './components/ui/button';
 import { Label } from './components/ui/label';
 import { Input } from './components/ui/input';
 import { Card, CardContent, CardFooter } from './components/ui/card';
+import { motion } from "framer-motion"
 
 
 
@@ -75,7 +76,9 @@ function App() {
   return (
     <>
 
-    <div>
+    <motion.div initial={{ opacity: 0}}
+      animate={{ opacity: 1, }} 
+      transition={{ duration: 0.6 }} >
     
       <div  className={` ${alertboxStatus ? 'overLay' : '' }`}></div>
       <div className={`${alertboxStatus ? 'alertBox' : ''}`}> 
@@ -90,13 +93,21 @@ function App() {
       <Button size='sm' type="submit" onClick ={()=> setAlertboxStatus(false) } className={`${alertboxStatus ? 'btnCenter' : "hidden"}`}>Submit</Button>
       </form>
       </div>
-    </div>  
+    </motion.div>  
       
-       <div className={`text-orange-500 lobster font-semibold text-5xl fixed p-7 hover:scale-110 hover:transition-all ${alertboxStatus ? 'animate-bounce' : "animate-none"}`}>
-        CHATify
-       </div>
+       <motion.div initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 1 }} 
+       className={`text-orange-500 lobster font-semibold text-5xl fixed p-7 hover:scale-110 hover:transition-all ${alertboxStatus ? '' : "animate-none"}`}>
+       <h1>CHATify</h1> 
+       </motion.div>
       
-       <h1 className='text-white top-52 ml-96 relative'>{welmsg}</h1>
+       <motion.h1 initial={{ opacity: 0, x: -70 }} // Initial animation state
+      animate={{ opacity: 1, x: 0 }} // Animation when component mounts
+      transition={{ duration: 6 }} 
+       className='text-zinc-100 top-52 ml-[365px] relative text-2xl -mb-4 font-normal lobster tracking-wide'>
+        {welmsg}
+        </motion.h1>
       
     
     <div className='flex  justify-center items-center h-screen  '>
@@ -108,7 +119,7 @@ function App() {
           <div className="grid w-full items-center gap-4 mt-5">
             <div className="flex flex-col space-y-1.5 text-slate-300 ">
              
-              <h1 className='text-xl text-orange-400 font-serif '>{socketId}</h1>
+              <h1 className='text-xl text-orange-400 font-serif font-medium '>{socketId}</h1>
               <Label htmlFor="roomId" >Room ID</Label>
               <Input 
               value={room}

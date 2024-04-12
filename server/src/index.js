@@ -31,8 +31,8 @@ io.on("connection", (socket)=>{                                      //"connecti
 
     socket.on("username", (namee)=>{
         console.log(namee);
-        socket.emit("welcome", `Welcome to the CHATify ${namee}`)
-    socket.broadcast.emit("welcome" , `${socket.id}--${namee} joined the chat`)
+        socket.emit("welcome", `Welcome to CHATify ${namee}`)
+    socket.broadcast.emit("welcome" , `${socket.id} -- ${namee} joined the chat`)
     })
 
     // ye chiz apan yaha nhi krte
