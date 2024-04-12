@@ -105,7 +105,7 @@ function App() {
        <motion.h1 initial={{ opacity: 0, x: -70 }} // Initial animation state
       animate={{ opacity: 1, x: 0 }} // Animation when component mounts
       transition={{ duration: 6 }} 
-       className='text-zinc-100 top-52 ml-[365px] relative text-2xl -mb-4 font-normal lobster tracking-wide'>
+       className='text-zinc-100 top-52 ml-[365px] relative text-2xl mb-2 font-normal lobster tracking-wide'>
         {welmsg}
         </motion.h1>
       
